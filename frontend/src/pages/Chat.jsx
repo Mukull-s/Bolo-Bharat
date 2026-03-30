@@ -340,8 +340,8 @@ export default function Chat() {
   );
 
   return (
-    <section className="flex flex-col h-[calc(100vh-64px)] bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-950 dark:to-slate-950 transition-colors duration-200">
-      <div className="flex-1 w-full max-w-3xl mx-auto flex flex-col">
+    <section className="flex flex-col flex-1 min-h-0 overflow-hidden bg-gradient-to-b from-emerald-50/50 to-white dark:from-slate-950 dark:to-slate-950 transition-colors duration-200">
+      <div className="flex-1 min-h-0 w-full max-w-3xl mx-auto flex flex-col">
         
         {/* Simple Header */}
         <div className="flex items-center justify-between px-4 py-3 bg-white/80 backdrop-blur-sm border-b border-slate-100 dark:bg-slate-900/80 dark:border-slate-800 shrink-0">
@@ -391,7 +391,7 @@ export default function Chat() {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
           <div ref={scrollRef} className="flex-1 overflow-y-auto px-3 sm:px-4 py-3 space-y-3">
             {messages.map((msg, index) => (
               <div key={index} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>

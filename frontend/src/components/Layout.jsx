@@ -33,7 +33,7 @@ export default function Layout({ children }) {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+    <div className="min-h-screen overflow-hidden flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
       <header className="sticky top-0 z-50 bg-white/90 border-b border-slate-200/80 shadow-sm backdrop-blur-sm dark:bg-slate-950/95 dark:border-slate-800/80">
         <nav className="max-w-6xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-2">
           <Link
@@ -90,7 +90,7 @@ export default function Layout({ children }) {
           </div>
         </nav>
       </header>
-      <main className="flex-1">
+      <main className="flex-1 min-h-0 flex flex-col">
         {children}
       </main>
       <footer className="bg-slate-900 text-slate-300 py-6 mt-auto dark:bg-slate-900">
